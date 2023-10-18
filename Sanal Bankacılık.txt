@@ -1,0 +1,138 @@
+#include <iostream.h>
+#include <conio.h>
+#include <string>
+main()
+{
+int sifre,syeni,secenek,bakiye=100,cek,yatir;
+string kullaniciadi,kyeni,b,a;
+
+
+cout<<"Hos Geldiniz! Lutfen yeni bir hesap acarak baslayiniz."<<endl;
+
+cout<<"Kullanici adi olusturunuz (sadece harflerden olmali): ";
+cin>>kyeni;
+
+cout<<"Sifre olusturunuz (sadece rakamlardan olmali): ";
+cin>>syeni;
+cout<<"Hesabiniz basariyla olusturulmustur."<<endl<<endl<<endl;
+kadi:
+cout<<"Kullanici adinizi giriniz: ";
+  cin>>kullaniciadi;
+  if (kullaniciadi!=kyeni) {
+							cout<<"Hatali Kullanici adi!"<<endl<<endl;
+							goto kadi;
+						   }
+ sifree:
+ cout<<"Sifrenizi giriniz: ";
+ cin>>sifre;
+ if (sifre!=syeni) {
+					cout<<"Hatali Sifre!"<<endl<<endl;
+					goto sifree;
+
+				   }
+
+
+  arayuz:
+
+cout<<"Bakiye sorgulama:1"<<" "<<" "<<" "<<" "<<" "<<"Para Cekme:2"<<endl;
+cout<<"                  "<<" "<<" "<<" "<<" "<<" "<<"            "<<endl;
+cout<<"                  "<<" "<<" "<<" "<<" "<<" "<<"            "<<endl;
+cout<<"Para yatirma:3    "<<" "<<" "<<" "<<" "<<" "<<"Cikis:4     "<<endl;
+cin>>secenek;
+if (secenek==1)
+   {
+	cout<<bakiye<<endl;
+
+	baskaislem:
+
+	cout<<"Baska bir islem yapmak istiyor musunuz? :";
+	cin>>b;
+		if (b=="evet")
+			{
+			 goto arayuz;
+			}
+			 else
+				  if (b=="hayir")
+					 {
+					  goto son;
+					 }
+					  else
+						goto baskaislem;
+
+
+
+   }
+   else
+   if (secenek==2)
+	  {
+
+	  paracekme:
+
+	  cout<<"Cekmek istediginiz miktari giriniz:"<<endl;
+	  cin>>cek;
+	   if (cek>bakiye)
+		  {
+		  cout<<"Yetersiz bakiye lutfen tekrar deneyin."<<endl;
+		  goto paracekme;
+		  }
+		   else
+			 if (cek<1) goto paracekme;
+			 bakiye=bakiye-cek;
+		 cout<<"Kalan bakiyeniz:"<<" "<<bakiye<<endl;
+		 cout<<"Baska bir islem yapmak istiyor musunuz? :";
+		cin>>b;
+		 if (b=="evet")
+			{
+			 goto arayuz;
+			}
+			 else
+				  if (b=="hayir")
+					 {
+					  goto son;
+					 }
+					  else
+						   goto baskaislem;
+
+
+
+
+
+
+
+	  }
+	  else
+	  if (secenek==3)
+		 {
+		 parayatir:
+
+		 cout<<"Yatirilan miktar:";
+		 cin>>yatir;
+		   if (yatir<1)
+			 {
+			  goto parayatir;
+			 }
+			bakiye=bakiye+yatir;
+		   cout<<"Yeni Bakiyeniz:"<<" "<<bakiye<<endl;
+		   cout<<"Baska bir islem yapmak istiyor musunuz? :";
+
+		   cin>>b;
+		   if (b=="evet")
+			{
+			 goto arayuz;
+			}
+			 else
+				  if (b=="hayir")
+					 {
+					  goto son;
+					 }
+					  else
+						 goto baskaislem;
+		 }
+		 else
+		  if (secenek==4) goto son;
+
+
+son:
+ getch();
+}
+
