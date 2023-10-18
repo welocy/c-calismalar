@@ -1,0 +1,114 @@
+#include <iostream.h>
+#include <conio.h>
+#include <windows.h>
+#include <string>
+
+main()
+{
+ srand(time(0));
+ string isim,cevap,hitap;
+ string argo[5]={"Mal","Aptal","Salak","Gerizekali","Beyinsiz"};
+ unsigned short int secenek,a;
+ cout<<"Dunyanin en onemli programi olmaya aday olan programa hosgeldiniz."<<endl;
+ cout<<"Program ilk basta size anket tarzi sorular soracak"<<endl;
+ cout<<"Sizin yapmaniz gerek tek sey sorulari dogru cevaplayip beklemek.."<<endl;
+ cout<<"Biraz bekledikten sonra sizi hic beklemediginiz bir tablo karsilayacak"<<endl<<endl;
+ cout<<"Ilk oncelikle isminizi ogrenmek istiyorum : ";
+ cin>>isim;
+ dongu:
+ cout<<"Cinsiyetiniz : (Kadin(1) - Erkek(2))"<<endl;
+ cin>>secenek;
+ if(secenek==1)
+	{
+	 hitap="Hanim";
+	 cout<<endl<<"Tesekkur ederim "<<isim<<" "<<hitap<<". Simdi sizi bir kac soru ile bunaltacagim."<<endl<<endl;
+	 cout<<"Ilk oncelikle kitap okuyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+	 cin>>cevap;
+	 cout<<"Kahve tuketiyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+	 cin>>cevap;
+	 cout<<"Arac kullaniyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+	 cin>>cevap;
+	 cout<<isim<<" "<<hitap<<" kendinizi tek bir kelime ile ifade eder misiniz ?"<<endl;
+	 cin>>cevap;
+	 cout<<"Tesekkur ederim anketi doldurdugunuz icin "<<isim<<" "<<hitap<<". Birazdan hayal edemeyeceginiz seyler gerceklesecek"<<endl;
+	}
+  else if(secenek==2)
+	   {
+		hitap="Bey";
+		cout<<endl<<"Tesekkur ederim "<<isim<<" "<<hitap<<". Simdi sizi bir kac soru ile bunaltacagim."<<endl<<endl;
+		cout<<"Ilk oncelikle kitap okuyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+		cin>>cevap;
+		cout<<"Kahve tuketiyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+		cin>>cevap;
+		cout<<"Arac kullaniyor musunuz "<<isim<<" "<<hitap<<" ?"<<endl;
+		cin>>cevap;
+		cout<<isim<<" "<<hitap<<" kendinizi tek bir kelime ile ifade eder misiniz ?"<<endl;
+		cin>>cevap;
+	   cout<<"Tesekkur ederim anketi doldurdugunuz icin "<<isim<<" "<<hitap<<". Birazdan hayal edemeyeceginiz seyler gerceklesecek"<<endl;
+	   }
+	  else
+		goto dongu;
+
+    //yüklenme ekrani
+		for (int i = 0; i < 30; i++)
+		{
+		cout<<""<<endl;
+		Sleep(100);
+		}
+		for (int a = 0; a < 55; a++)
+		{
+		cout<<"=";
+		Sleep(120);
+
+		}
+		for (int i = 0; i < 1; i++)
+		{
+		cout<<"L";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"O";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"A";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"D";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"I";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"N";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"G";
+		Sleep(200);
+		}
+	   for (int a = 0; a < 55; a++)
+		{
+		 cout<<"=";
+		 Sleep(120);
+
+		}
+	   //yüklenme bitis
+
+	for (int i = 0; i < 1000; i++)
+	{
+	 a=rand()%5;
+	 cout<<argo[a]<<" "<<isim<<"     ";
+	 Sleep(15);
+	}
+  getch();
+}
