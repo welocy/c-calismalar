@@ -1,0 +1,28 @@
+#include <iostream.h>
+#include <conio.h>
+#include <string>
+
+main()
+{
+string soru[20]={"Nobel odulleri hangi ulkede verilmektedir?","Turkiye'de Erozyonla mucadele amaciyla kurulan vakfin kisa adi nedir?","Ataturk tarafindan 4 Eylul 1919 tarihinde Sivas Kongresi'nde kurulmus olan gazetenin adini soyleyiniz?","Osmanli Devleti'nde ilk nufus sayimi hangi padisah zamaninda yapilmistir?","Ilk Turkce sozluk hangisidir?","Kadinlara secme ve secilme hakki taniyan ilk ulke hangisidir ?","Mimar Sinan'in Ustalik Donemi eseri sayilan Edirne'deki eserinin adi nedir?","'Turk Devleti bir Cumhuriyettir.' ifadesi anayasamizin kacinci maddesidir?","UEFA Kupasini alan ilk Turk takimi hangisidir?","Altin Palmiye sinema odulu hangi film festivalinde verilmektedir?","Hangisi Turk Devletidir?","Tarihcilerin Kutbu olarak bilinen dunyaca unlu tarihcimiz kimdir?","Fransiz Ihtilali kac yinida gerceklesmistir?","Hangi hayvan memeli degildir?","Bu tablo kime aittir?","Osmanli'da Lale devri hangi padisah doneminde yasanmistir?"," Fas'in baskenti hangi sehirdir?","Istiklal Marsi hangi yil yazilmistir?","Yerden fiskirarak cikan sicak su kaynaklarina ne denir?","'Tahtelbahir' Osmanli Devleti zamaninda hangisine verilen bir isimdir?"};
+string cevap2[20]={"Isvec(1) -- Norvec(2)","TEMA(1) -- AKUT(2)","Ceride-i Havadis(1) -- Irade-i Milliye(2)","II.Mahmut(1) -- I. Mahmut(2)","Divan-i Hikmet(1) -- Divan-i Lugat-it Turk(2)","Fransa(1) -- Turkiye(2)","Selimiye(1) --  Suleymaniye(2)","1. Maddesidir(1) -- 2. Maddesidir(2)","Galatasaray(1) -- Fenerbahce(2)","Cannes Film Festivali(1) -- Cambridge Film Festivali(2)","Avar Kaganligi(1) -- Emevi Devleti(2)","Ilber Ortayli(1) -- Halil Inalcik(2)","1876-1889(1) -- 1789-1799(2)","Penguen(1) -- Yarasa(2)","Leonardo da Vinci(1) -- Tablo nerede hocam?(2)","III.Ahmet(1) -- III.Selim(2)","Rabat(1) -- Kazablanka(2)","1920(1) -- 1921(2)","Lav(1) -- Gayzer(2)","Kayik(1) -- Denizalti(2)"};
+int cevap[20]={1,1,2,1,2,2,1,1,1,1,1,2,2,1,2,1,1,2,2,2},sec;
+
+cout<<"Bu testte 20 tane soru bulunmaktadir. Her yanlis cevabinizda en basa doneceksiniz"<<endl<<endl<<"Basarilar :).."<<endl;
+cout<<"UNUTMAYIN CEVAP NUMARALARI HARIC NUMARA GIRERSENIZ YINE EN BASA DONERSINIZ!"<<endl<<endl;
+//cout<<"                                         Sonda seni bir surpriz bekliyor."<<endl<<endl;
+baslangic:
+for (int i = 0; i < 20; i++)
+ {
+  if(soru[i]==soru[19])
+  cout<<"                                  Buraya kadar geldin tebrikler. Surpriz icin son bir dogru cevap.."<<endl<<endl;
+  cout<<i+1<<"- "<<soru[i]<<endl<<cevap2[i]<<endl;
+  cin>>sec;
+  if(sec!=cevap[i])
+  goto baslangic;
+ }
+ cout<<"Bravooo"<<endl<<endl<<endl<<"https://www.youtube.com/watch?v=NUYvbT6vTPs"<<endl;
+ cout<<"                                                        Mouse ile linki secip 'ctrl + c' yapiniz.";
+getch();
+}
+
