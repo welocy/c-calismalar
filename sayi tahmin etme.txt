@@ -1,0 +1,30 @@
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+ unsigned int taban=0,tavan,tahmin,cevap,deneme_adeti=0;
+
+ cout<<"0 ile kac arasinda sayi tutmak istersin"<<endl<<endl;
+ cin>>tavan;
+ cout<<endl<<"Simdi senden 0 ile "<<tavan<<" arasindan bir sayi tutmani istiyorum, istersen bir kenara not et."<<endl;
+ cout<<"Sana sirayla sayilar soyleyecegim ve senden beni yonlendirmeni istiyorum."<<endl<<endl<<endl;
+  do
+  {
+  tahmin=(tavan+taban)/2;
+  cout<<"Benim tahminim"<<tahmin<<endl;
+  deneme_adeti+=1;
+  cout<<"Tahminim, tuttugun sayidan buyuk(1)"<<endl;
+  cout<<"Tahminim, tuttugun sayidan kucuk(2)"<<endl;
+  cout<<"Tahminim, tuttugun sayi ile ayni(3)"<<endl;
+  cin>>cevap;
+  if(cevap==1)
+	  tavan=tahmin;
+  else if(cevap==2)
+	  taban=tahmin;
+  }
+  while(cevap!=3);
+
+  cout<<deneme_adeti<<". denemede buldum. :)";
+ getch();
+}
