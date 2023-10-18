@@ -1,0 +1,86 @@
+#include <iostream.h>
+#include <conio.h>
+#include <string>
+  //o anki modunuza görr şarkı öneren program
+main()
+{
+ srand(time(0));
+ string kopkop[18]={"Doja Cat - Boss Bitch","CJ - Whoopty","J Balvin - China","Patron - Goal","Patron,Ati242 - Whatsapp","Burak Balkan - Feel","Deorro - Andele","Ben Fero - Ferhat Yilmaz","Ben Fero - Biladerim icin","Aga b - Kum Kale","Ufo361,Ezhel - Wir sind kral","Ufo361,Ezhel - Yemin Olsun","Ufo361,Ezhel - Zombie","Ufo361,Ezhel - Bir Daha","SuitStatic - Out of My Head","Halsey - Balenciaga","Anthony Sceam - See You","Ramil Nabran - Bomba"};
+ string klasik[16]={"Stefan Andre - Gunaydin","Evgeny Grinko - Valse","Berent Oral - Nocturne No.1","II Divo - Adagio 2012 version","Ana Olgica - Amalfi Moon","Evgeny Grinko - Valse Cm","Farid Farjad - Taghatam Deh","Evanthia Reboutsika - The Railway Station","Stefan Andre - Yosun Arasi","The Piano Guys - Beethoven's 5 Secrets","James Spiteri - Travelling","Stefan Andre - Umut","Ali Toygar - Waltz of the Stars","Tom Holding - The Green Fields of Acron","Farid Farjad - Nefrin","Villa Lobos - A lenda do caboclo"};
+ string efkar[36]={"Aysel Yakupoglu - Gun Gelir","Muslum Gurses - Sensiz Olmaz","Muslum Gurses - Nilufer","Endel Balkir - Ruhumda Sizi","Bergen - Sen Affetsen","Melek Mosso - Keklik Gibi","Ahmet Aslan - Minnet Eylemem","Can Kazaz - Bunca Yil","Firat Tanis - Yani","Cengiz Kurtoglu - Kullenen Ask","Cansever - Kime Bu Inat","Selda Bagcan - Adaletin Bu mu Dunya","Zara - Hasretinden Yandi Gonlum","Zeynep Baksi - Odam Kirec Tutmuyor","Karsu - Jest Oldu","Gazapizim - Sanki bir Halkin","Pinhani - Kefen Giydim","Muslum Gurses - Kac Kadeh Kirildi","Kahraman Deniz - Boyle Sever","Kahraman Deniz - Suc Mahalli","No.1 - Romeo ve Juliet","No.1 - Soyle Ona","Melike Sahin - Kara Orman","Melike Sahin - Gelmedi Elimden","Yener Cevik - Senden Gizledim","Cengiz Ozkan - Bir Ay Dogar","Cengiz Ozkan - Bir Ay Dogar","Cengiz Ozkan - Degme Felek","Cem Adrian - Sen Gel Diyorsun","Onur Can Ozcan - Kibrit","Sena Sener - Sevmemeliyiz","Jehan Barbur - Oylesine","Selami Sahin - Ben Sevdali Sen Belali","Aytekin Atas - O Yar Gelir","Ferdi Tayfur - Sigarayi Biraktim","Cavid Tagizade - Hercai"};
+ string cehennembeatz[13]={"Cehennem Beat - Baba","Cehennem Beat - Oysa Herkes Oldurur Sevdigini","Cehennem Beat - Babalari Gelsin","Cehennem Beat - Bozar mi Sandin Acilar","Cehennem Beat - Beni Neden Sevmedin","Fatih Yilmaz - Yardim Et Nolur","Cehennem Beat - Bakarmisiniz","Cehennem Beat - Ben Bunu Hakedecek Ne Yaptim","Mustafa Barak - Kurtlar Vadisi(Racon)","Tolga Sahin - Kurtlar Vadisi(Racon2)","Saz Mix","Bay Terapist - Operasyon","Bay Terapist - Zurna Trap Remix"};
+ string sakin[8]={"Passenger - Let her Go","Izumi Tanaka - Rikyu Garden","Wincent M - Summer Rain","Tycho - Melanine","Musicboxes - Silence","Luc Serra - City of Stars","Russel f jr - Coffee in Bed","Enzo - Sunrise"};
+ string belirsiz;
+ int sec,raskop,rasklas,rasefkar,rascehennem,rassakin,rasbelirsiz;
+ int sec2;
+ cout<<"Muzik dinlemek icin ne guzel bir zaman..Fakat sen kararsiz gozukuyor gibisin."<<endl<<"Endiselenmene gerek  yok muzik konusunda yardimci olacagim."<<endl;
+ cout<<"Sana tavsiyede bulunmam icin bir kac secenek sunacagim. Sana uygun olani sec."<<endl<<endl<<endl<<endl;
+ anaekran:
+ cout<<"Kanka modum yuksek kafa sallasam dans etsem yeter(1)"<<endl<<endl<<"Reis acil klasik ver bana(2)"<<endl<<endl<<"Dertliyim de efkara sok beni(3)"<<endl<<endl<<"Aga cehennembeatz falan anladin sen :)(4)";
+ cout<<endl<<endl<<"Acayip yorgunum sakin bir seyler ver hocam(5)"<<endl<<endl<<"Bilmiyorum ki bro takil kafana gore(6)"<<endl<<endl<<endl<<endl;
+ tekrar:
+ cin>>sec;
+ if (sec>6)
+	{
+	 cout<<"Boyle bir secenek yok dostum.Tekrar dene."<<endl;
+	 goto tekrar;
+	}
+ else if(sec<1)
+	{
+     cout<<"Boyle bir secenek yok dostum.Tekrar dene."<<endl;
+	 goto tekrar;
+	}
+ else if(sec==1)
+   {                          //haraketli
+	do
+	 {
+	 raskop=rand()%18;
+	 cout<<"Anlanmli bir soz beklemiyosun heralde."<<endl<<endl<<kopkop[raskop]<<endl;
+	 cout<<"Hosuna gitmediyse tekrar onereyim ya da girise git"<<endl;
+	 cout<<"Tekrar(1) -- Ana ekran(2)"<<endl<<endl<<endl<<endl;
+	 cin>>sec2;
+	 }while(sec2==1);
+
+	goto anaekran;
+   }
+ else if(sec==2)
+   {                            //klasik
+	do
+	 {
+	 rasklas=rand()%16;
+	 cout<<"Klasikler bazen sakin bazen ise gumbur gumburdur."<<endl<<endl<<klasik[rasklas]<<endl;
+	 cout<<"Hosuna gitmediyse tekrar onereyim ya da ana ekrana git*"<<endl;
+	 cout<<"Tekrar(1) -- Ana ekran(2)"<<endl<<endl<<endl<<endl;
+	 cin>>sec2;
+	 }while(sec2==1);
+
+	goto anaekran;
+   }
+ else if(sec==3)
+   {
+	do
+	 {                         //efkar
+	 rasefkar=rand()%36;
+	 cout<<"ben bile dayanamam aga bunlara."<<endl<<endl<<efkar[rasefkar]<<endl;
+	 cout<<"Hosuna gitmediyse tekrar onereyim ya da ana ekrana git*"<<endl;
+	 cout<<"Tekrar(1) -- Ana ekran(2)"<<endl<<endl<<endl<<endl;
+	 cin>>sec2;
+	 }while(sec2==1);
+
+	goto anaekran;
+   }
+ else if(sec==4)
+   {
+	do
+	 {                          //cehennem beatz
+	 rascehennem=rand()%13;
+	 cout<<"Lokman ver oglum muzigi."<<endl<<endl<<cehennembeatz[rascehennem]<<endl;
+	 cout<<"Hosuna gitmediyse tekrar onereyim ya da ana ekrana git*"<<endl;
+	 cout<<"Tekrar(1) -- Ana ekran(2)"<<endl<<endl<<endl<<endl;
+	 cin>>sec2;
+	 }while(sec2==1);
+
+	goto anaekran;
+   }
+ getch();
+}
