@@ -1,0 +1,85 @@
+#include <iostream.h>
+#include <conio.h>
+#include <string>
+#include <windows.h>
+
+main()
+{
+srand(time(0));
+int aa=0,adet,ras=rand();
+string elemanlar[50],isim;
+
+
+cout<<"                          Kura Cekimi"<<endl;
+cout<<"Kac adet isim girilecek?(en fazla 50 kisi) : ";
+cin>>adet;
+ras= ras%adet;
+
+for (int i = 1; i <= adet; i++)
+  {
+  cout<<i<<". isimi giriniz : ";
+  cin>>isim;
+  elemanlar[aa]=isim;
+  aa=aa++;
+  }
+
+       //yüklenme ekrani
+		for (int i = 0; i < 50; i++)
+		{
+		cout<<""<<endl;
+		Sleep(40);
+		}
+		for (int a = 0; a < 55; a++)
+		{
+		cout<<"=";
+		Sleep(120);
+
+		}
+		for (int i = 0; i < 1; i++)
+		{
+		cout<<"L";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"O";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"A";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"D";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"I";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"N";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"G";
+		Sleep(200);
+		}
+	   for (int a = 0; a < 55; a++)
+		{
+		 cout<<"=";
+		 Sleep(120);
+
+		}
+	   //yüklenme bitis
+
+
+  cout<<endl<<"Secilen : "<<elemanlar[ras];
+  cout<<endl<<"                                                                                      Kuracy v1.2       made by welocy..";
+  getch();
+}
