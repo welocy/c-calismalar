@@ -1,0 +1,56 @@
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+ //a:ilk seçenek, b:ikinci seçenek, c:ilk evet-hayır, d:ikinci evet-hayır
+int a,b,c,d;
+cout<<"Iki sey arasinda kararsiz kaldiysaniz bu program sizin icin yararli olacaktir"<<endl;
+
+baslangic:
+
+cout<<"Lutfen kararsiz kaldiginiz ilk seyi numaralandiriniz:";
+cin>>a;
+cout<<"lutfen kararsiz kaldiginiz ikinci seyi numaralandiriniz:";
+cin>>b;
+cout<<"Secilen sey:"<<" "<<a<<endl;
+
+döngü:
+
+cout<<"Sonucdan memnun musunuz ?(Evet:1, Hayir:2):";
+cin>>c;
+if (c==1) cout<<"Son.";
+   else
+	  if (c==2) cout<<"Siz zaten kendiniz secmissiniz, bize gerek yok :)";
+		  else
+			 if (c<1) {cout<<"Bu bir cevap degildir."<<endl;
+
+					   goto döngü;
+					  }
+				else
+					if (c>2) {cout<<"Bu bir cevap degildir."<<endl;
+
+							  goto döngü;
+							 }
+
+checkpoint:
+
+cout<<endl<<"Basa donmek ister misiniz?"<<" "<<"(Evet:1, Hayir:2):";
+cin>>d;
+if (d==1) goto baslangic;
+   else
+	  if (d==2) goto son;
+		  else
+			 if (d<1) {cout<<"Bu bir cevap degildir."<<endl;
+
+					   goto checkpoint;
+					  }
+				else
+					if (d>2) {cout<<"Bu bir cevap degildir."<<endl;
+
+							  goto checkpoint;
+							 }
+
+son:
+getch();
+}
