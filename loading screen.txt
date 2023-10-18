@@ -1,0 +1,54 @@
+  //yüklenme ekrani
+		for (int i = 0; i < 50; i++)
+		{
+		cout<<""<<endl;
+		Sleep(40);
+		}
+		for (int a = 0; a < 55; a++)
+		{
+		cout<<"=";
+		Sleep(120);
+
+		}
+		for (int i = 0; i < 1; i++)
+		{
+		cout<<"L";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"O";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"A";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"D";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"I";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"N";
+		Sleep(200);
+		}
+	   for (int i = 0; i < 1; i++)
+		{
+		cout<<"G";
+		Sleep(200);
+		}
+	   for (int a = 0; a < 55; a++)
+		{
+		 cout<<"=";
+		 Sleep(120);
+
+		}
+	   //yüklenme bitis
