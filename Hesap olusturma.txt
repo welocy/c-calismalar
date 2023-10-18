@@ -1,0 +1,26 @@
+int sifre,syeni;
+string kullaniciadi,kyeni;
+
+
+cout<<"Hos Geldiniz! Lutfen yeni bir hesap acarak baslayiniz."<<endl;
+
+cout<<"Kullanici adi olusturunuz (sadece harflerden olmali): ";
+cin>>kyeni;
+
+cout<<"Sifre olusturunuz (sadece rakamlardan olmali): ";
+cin>>syeni;
+cout<<"Hesabiniz basariyla olusturulmustur."<<endl<<endl<<endl;
+kadi:
+cout<<"Kullanici adinizi giriniz: ";
+  cin>>kullaniciadi;
+  if (kullaniciadi!=kyeni) {
+							cout<<"Hatali Kullanici adi!"<<endl<<endl;
+							goto kadi;
+						   }
+ sifree:
+ cout<<"Sifrenizi giriniz: ";
+ cin>>sifre;
+ if (sifre!=syeni) {
+					cout<<"Hatali Sifre!"<<endl<<endl;
+					goto sifree;
+				   }
